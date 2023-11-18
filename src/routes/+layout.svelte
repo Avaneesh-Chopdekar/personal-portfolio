@@ -7,11 +7,6 @@
 	import Footer from '../components/Footer.svelte';
 </script>
 
-<svelte:head>
-	<title>Avaneesh</title>
-	<meta name="description" content="Avaneesh's personal portfolio made using svelte-kit" />
-</svelte:head>
-
 <div class="app">
 	<Navbar />
 	<div class="layout">

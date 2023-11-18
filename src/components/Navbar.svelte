@@ -16,7 +16,7 @@
 				<li>Help</li>
 			</ul>
 		</div>
-		<p class="middle">Avaneesh - Visual Studio Code</p>
+		<h1 class="middle">Avaneesh - Visual Studio Code</h1>
 		<div class="right">
 			<span class="green"></span>
 			<span class="yellow"></span>
@@ -56,6 +56,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
+		font-weight: normal;
 	}
 	.right span {
 		height: 14px;

@@ -1,5 +1,10 @@
+<svelte:head>
+	<title>Avaneesh</title>
+	<meta name="description" content="Avaneesh's personal portfolio made using svelte-kit" />
+</svelte:head>
+
 <main>
-	<h1>Avaneesh</h1>
+	<h2>Avaneesh</h2>
 </main>
 
 <style>

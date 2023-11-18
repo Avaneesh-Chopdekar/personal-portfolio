@@ -58,10 +58,10 @@
 		background-color: black;
 	}
 	@media screen and (max-height: 400px) {
-		img {
-			padding: 0.35rem;
-			height: calc(1.4rem * 0.35rem);
-			width: calc(1.4rem * 0.35rem);
+		a {
+			padding: 0.3rem;
+			height: calc(1.4rem * 0.3rem);
+			width: calc(1.4rem * 0.3rem);
 		}
 	}
 </style>

@@ -26,6 +26,10 @@
 </div>
 
 <style>
+	.app {
+		width: 100%;
+		height: 100%;
+	}
 	.layout {
 		display: flex;
 		width: 100%;
@@ -40,9 +44,14 @@
 			width: calc(100% - 3.2rem);
 		}
 	}
-	@media screen and (max-height: 400px) {
+	@media screen and (max-height: 400px) and (min-width: 768px) {
 		.container {
-			width: calc(100% - 12.6rem);
+			width: calc(100% - 12rem);
+		}
+	}
+	@media screen and (max-height: 400px) and (max-width: 768px) {
+		.container {
+			width: calc(100% - 2.45rem);
 		}
 	}
 </style>

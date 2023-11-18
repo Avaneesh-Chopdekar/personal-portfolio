@@ -63,7 +63,7 @@
 		border-top: 1px solid transparent;
 		border-right: 1px solid var(--dark);
 	}
-	ul:first-child > a {
+	ul:first-child a {
 		border-left: 1px solid var(--dark);
 	}
 	li > a:hover {

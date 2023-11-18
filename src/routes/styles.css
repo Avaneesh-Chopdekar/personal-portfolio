@@ -4,9 +4,7 @@
 	box-sizing: border-box;
 	font-family: 'Inter', system-ui, sans-serif;
 }
-*,
-*::before,
-*::after {
+:root {
 	--darker: #161616;
 	--dark: #252525;
 }

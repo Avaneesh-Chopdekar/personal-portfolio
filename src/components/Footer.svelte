@@ -3,6 +3,7 @@
 	import errorIcon from '$lib/images/vsc-icons/error.svg';
 	import warningIcon from '$lib/images/vsc-icons/warning.svg';
 	import svelteIcon from '$lib/images/ext-icons/svelte-icon.svg';
+	import checkIcon from '$lib/images/vsc-icons/check.svg';
 	import bellIcon from '$lib/images/vsc-icons/bell.svg';
 </script>
 
@@ -28,9 +29,13 @@
 		</div>
 	</div>
 	<div class="spacer"></div>
-	<div class="powered-by-sveltekit">
+	<div class="svelte">
 		<img src={svelteIcon} alt="" />
-		<span>Powered by Svelte</span>
+		<span>Svelte</span>
+	</div>
+	<div class="prettier">
+		<img src={checkIcon} alt="" />
+		<span>Prettier</span>
 	</div>
 	<img class="bell-icon" src={bellIcon} alt="" />
 </footer>
@@ -69,7 +74,8 @@
 	.issues {
 		margin-left: 0.75rem;
 	}
-	.powered-by-sveltekit {
+	.prettier,
+	.svelte {
 		margin-right: 0.75rem;
 	}
 </style>

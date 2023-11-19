@@ -1,5 +1,6 @@
 <script>
 	import vscodeIcon from '$lib/images/vsc-icons/vscode_icon.svg';
+	const navItems = ['File', 'Edit', 'View', 'Go', 'Run', 'Terminal', 'Help'];
 </script>
 
 <header>
@@ -7,13 +8,9 @@
 		<div class="left">
 			<img src={vscodeIcon} width="16" height="16" alt="VScode" />
 			<ul>
-				<li>File</li>
-				<li>Edit</li>
-				<li>View</li>
-				<li>Go</li>
-				<li>Run</li>
-				<li>Terminal</li>
-				<li>Help</li>
+				{#each navItems as item (item)}
+					<li>{item}</li>
+				{/each}
 			</ul>
 		</div>
 		<h1 class="middle">Avaneesh - Visual Studio Code</h1>

@@ -4,7 +4,8 @@
 </svelte:head>
 
 <main>
-	<h2>Avaneesh</h2>
+	<h2>Hey! I'm Avaneesh</h2>
+	<p>Every line of code I write is a step closer to unlocking limitless possibilities.</p>
 </main>
 
 <style>

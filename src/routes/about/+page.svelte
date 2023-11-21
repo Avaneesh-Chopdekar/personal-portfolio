@@ -3,7 +3,7 @@
 </svelte:head>
 
 <main class="about">
-	<h2>Fullstack Web Developer</h2>
+	<h2>Fullstack <span>Web Developer</span></h2>
 	<p>
 		My journey in web development revolves around one principle: to build websites that make a
 		difference. I thrive on developing applications that solve problems, enhance experiences, and
@@ -49,6 +49,10 @@
 		}
 		p {
 			width: 90%;
+		}
+		span::before {
+			content: '\a';
+			white-space: pre;
 		}
 	}
 	@media screen and (max-height: 400px) {

@@ -17,26 +17,26 @@
 
 <aside class="sidebar">
 	<div class="up">
-		<a class="page-list active" href="/" on:click={() => onSelectFile('home')} id="home"
-			><img src={fileIcon} alt="" /></a
-		>
-		<a class="page-list" href="/projects" on:click={() => onSelectFile('projects')} id="projects"
-			><img src={codeIcon} alt="" /></a
-		>
-		<a class="page-list" href="/articles" on:click={() => onSelectFile('articles')} id="articles"
-			><img src={editIcon} alt="" /></a
-		>
+		<a class="page-list active" href="/" on:click={() => onSelectFile('home')} id="home">
+			<img src={fileIcon} alt="" />
+		</a>
+		<a class="page-list" href="/projects" on:click={() => onSelectFile('projects')} id="projects">
+			<img src={codeIcon} alt="" />
+		</a>
+		<a class="page-list" href="/articles" on:click={() => onSelectFile('articles')} id="articles">
+			<img src={editIcon} alt="" />
+		</a>
 		<a href="https://github.com/Avaneesh-Chopdekar" target="_blank" rel="noopener noreferrer">
 			<img src={githubIcon} alt="" />
 		</a>
 	</div>
 	<div class="down">
-		<a class="page-list" href="/about" on:click={() => onSelectFile('about')} id="about"
-			><img src={accountIcon} alt="" /></a
-		>
-		<a class="page-list" href="/themes" on:click={() => onSelectFile('themes')} id="themes"
-			><img src={settingsIcon} alt="" /></a
-		>
+		<a class="page-list" href="/about" on:click={() => onSelectFile('about')} id="about">
+			<img src={accountIcon} alt="" />
+		</a>
+		<a class="page-list" href="/themes" on:click={() => onSelectFile('themes')} id="themes">
+			<img src={settingsIcon} alt="" />
+		</a>
 	</div>
 </aside>
 

@@ -25,7 +25,5 @@
 		"vite": "^4.4.2"
 	},
 	"type": "module",
-	"dependencies": {
-		"particles.js": "^2.0.0"
-	}
+	"dependencies": {}
 }

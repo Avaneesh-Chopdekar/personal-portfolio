@@ -1,6 +1,6 @@
 {
 	"name": "svelte-portfolio",
-	"version": "0.0.1",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",

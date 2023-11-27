@@ -1,24 +1,42 @@
-<script>
+<script lang="ts">
 	import fileIcon from '$lib/images/vsc-icons/files.svg';
 	import codeIcon from '$lib/images/vsc-icons/code.svg';
 	import editIcon from '$lib/images/vsc-icons/edit.svg';
 	import githubIcon from '$lib/images/vsc-icons/github-inverted.svg';
 	import accountIcon from '$lib/images/vsc-icons/account.svg';
 	import settingsIcon from '$lib/images/vsc-icons/settings-gear.svg';
+
+	function onSelectFile(id: string) {
+		document
+			.querySelectorAll('a.page-list')
+			.forEach((element) =>
+				element.id === id ? element.classList.add('active') : element.classList.remove('active')
+			);
+	}
 </script>
 
 <aside class="sidebar">
 	<div class="up">
-		<a href="/"><img src={fileIcon} alt="" /></a>
-		<a href="/projects"><img src={codeIcon} alt="" /></a>
-		<a href="/articles"><img src={editIcon} alt="" /></a>
+		<a class="page-list active" href="/" on:click={() => onSelectFile('home')} id="home"
+			><img src={fileIcon} alt="" /></a
+		>
+		<a class="page-list" href="/projects" on:click={() => onSelectFile('projects')} id="projects"
+			><img src={codeIcon} alt="" /></a
+		>
+		<a class="page-list" href="/articles" on:click={() => onSelectFile('articles')} id="articles"
+			><img src={editIcon} alt="" /></a
+		>
 		<a href="https://github.com/Avaneesh-Chopdekar" target="_blank" rel="noopener noreferrer">
 			<img src={githubIcon} alt="" />
 		</a>
 	</div>
 	<div class="down">
-		<a href="/about"><img src={accountIcon} alt="" /></a>
-		<a href="/themes"><img src={settingsIcon} alt="" /></a>
+		<a class="page-list" href="/about" on:click={() => onSelectFile('about')} id="about"
+			><img src={accountIcon} alt="" /></a
+		>
+		<a class="page-list" href="/themes" on:click={() => onSelectFile('themes')} id="themes"
+			><img src={settingsIcon} alt="" /></a
+		>
 	</div>
 </aside>
 
@@ -51,9 +69,9 @@
 		height: 100%;
 		width: 100%;
 	}
-	/* TODO: Add This On Selected Page   */
-	a:active {
-		border-left: 2px solid white;
+	/* a:active, */
+	.active {
+		border-left: 2px solid dodgerblue;
 	}
 	a:hover {
 		/* border: 2px solid gray; */

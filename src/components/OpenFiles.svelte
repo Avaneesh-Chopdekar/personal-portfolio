@@ -15,12 +15,27 @@
 		{ fileName: 'articles.md', route: '/articles', icon: markdownIcon },
 		{ fileName: 'themes.css', route: '/themes', icon: cssIcon }
 	];
+
+	function onSelectFile(fileName: string) {
+		document
+			.querySelectorAll('a.file-list')
+			.forEach((element) =>
+				element.id === fileName
+					? element.classList.add('active')
+					: element.classList.remove('active')
+			);
+	}
 </script>
 
 <ul>
-	{#each explorerItems as item (item.fileName)}
+	{#each explorerItems as item, index (item.fileName)}
 		<li>
-			<a href={item.route}>
+			<a
+				href={item.route}
+				id={item.fileName}
+				class={`${index === 0 && 'active'} file-list`}
+				on:click={() => onSelectFile(item.fileName)}
+			>
 				<img src={item.icon} alt={item.fileName} />
 				<span>{item.fileName}</span>
 			</a>
@@ -51,7 +66,8 @@
 	li > a:hover {
 		cursor: pointer;
 	}
-	li > a:active {
+	/* li > a:active, */
+	.active {
 		background-color: var(--dark);
 		border-top: 1px solid dodgerblue;
 	}

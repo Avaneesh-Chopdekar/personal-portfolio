@@ -2,7 +2,7 @@
 	import fileIcon from '$lib/images/vsc-icons/files.svg';
 	import codeIcon from '$lib/images/vsc-icons/code.svg';
 	import editIcon from '$lib/images/vsc-icons/edit.svg';
-	import mailIcon from '$lib/images/vsc-icons/mail.svg';
+	import githubIcon from '$lib/images/vsc-icons/github-inverted.svg';
 	import accountIcon from '$lib/images/vsc-icons/account.svg';
 	import settingsIcon from '$lib/images/vsc-icons/settings-gear.svg';
 </script>
@@ -12,7 +12,9 @@
 		<a href="/"><img src={fileIcon} alt="" /></a>
 		<a href="/projects"><img src={codeIcon} alt="" /></a>
 		<a href="/articles"><img src={editIcon} alt="" /></a>
-		<a href="/contact"><img src={mailIcon} alt="" /></a>
+		<a href="https://github.com/Avaneesh-Chopdekar" target="_blank" rel="noopener noreferrer">
+			<img src={githubIcon} alt="" />
+		</a>
 	</div>
 	<div class="down">
 		<a href="/about"><img src={accountIcon} alt="" /></a>

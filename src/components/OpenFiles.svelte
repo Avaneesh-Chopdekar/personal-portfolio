@@ -2,7 +2,6 @@
 	import reactIcon from '$lib/images/ext-icons/react_icon.svg';
 	import htmlIcon from '$lib/images/ext-icons/html_icon.svg';
 	import tsIcon from '$lib/images/ext-icons/ts_icon.svg';
-	import jsonIcon from '$lib/images/ext-icons/json_icon.svg';
 	import markdownIcon from '$lib/images/ext-icons/markdown_icon.svg';
 	import cssIcon from '$lib/images/ext-icons/css_icon.svg';
 	import type { FileListItem } from '$lib/utils/types';
@@ -11,7 +10,6 @@
 		{ fileName: 'index.jsx', route: '/', icon: reactIcon },
 		{ fileName: 'about.html', route: '/about', icon: htmlIcon },
 		{ fileName: 'projects.ts', route: '/projects', icon: tsIcon },
-		{ fileName: 'contact.json', route: '/contact', icon: jsonIcon },
 		{ fileName: 'articles.md', route: '/articles', icon: markdownIcon },
 		{ fileName: 'themes.css', route: '/themes', icon: cssIcon }
 	];

@@ -1,5 +1,5 @@
 <script>
-	import gitIcon from '$lib/images/vsc-icons/git-merge.svg';
+	import gitIcon from '$lib/images/vsc-icons/source-control.svg';
 	import errorIcon from '$lib/images/vsc-icons/error.svg';
 	import warningIcon from '$lib/images/vsc-icons/warning.svg';
 	import svelteIcon from '$lib/images/ext-icons/svelte-icon.svg';

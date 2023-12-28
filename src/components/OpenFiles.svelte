@@ -1,10 +1,14 @@
 <script lang="ts">
+	import { navigating, page } from '$app/stores';
+	import { browser } from '$app/environment';
 	import reactIcon from '$lib/images/ext-icons/react_icon.svg';
 	import htmlIcon from '$lib/images/ext-icons/html_icon.svg';
 	import tsIcon from '$lib/images/ext-icons/ts_icon.svg';
 	import markdownIcon from '$lib/images/ext-icons/markdown_icon.svg';
 	import cssIcon from '$lib/images/ext-icons/css_icon.svg';
 	import type { FileListItem } from '$lib/utils/types';
+	import { onNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	const explorerItems: FileListItem[] = [
 		{ fileName: 'index.jsx', route: '/', icon: reactIcon },
@@ -14,15 +18,15 @@
 		{ fileName: 'themes.css', route: '/themes', icon: cssIcon }
 	];
 
-	function onSelectFile(fileName: string) {
-		document
-			.querySelectorAll('a.file-list')
-			.forEach((element) =>
-				element.id === fileName
-					? element.classList.add('active')
-					: element.classList.remove('active')
-			);
+	function onSelectFile(pathname: string) {
+		document.querySelectorAll<HTMLAnchorElement>('a.file-list').forEach((element) => {
+			element.id == pathname ? element.classList.add('active') : element.classList.remove('active');
+		});
 	}
+
+	onMount(() => onSelectFile($page.url.pathname));
+
+	onNavigate(({ to }) => onSelectFile(to?.url.pathname!));
 </script>
 
 <ul>
@@ -30,9 +34,9 @@
 		<li>
 			<a
 				href={item.route}
-				id={item.fileName}
+				id={item.route}
 				class={`${index === 0 && 'active'} file-list`}
-				on:click={() => onSelectFile(item.fileName)}
+				on:click={() => onSelectFile(item.route)}
 			>
 				<img src={item.icon} alt={item.fileName} />
 				<span>{item.fileName}</span>
@@ -46,7 +50,7 @@
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		overflow-x: auto;
+		overflow-x: hidden;
 	}
 	li > a {
 		padding: 0.6rem 1rem;
@@ -72,5 +76,10 @@
 	img {
 		width: 1rem;
 		height: 1rem;
+	}
+	@media screen and (max-width: 480px) {
+		ul {
+			overflow-x: auto;
+		}
 	}
 </style>

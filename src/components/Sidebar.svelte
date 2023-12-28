@@ -1,29 +1,34 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import fileIcon from '$lib/images/vsc-icons/files.svg';
 	import codeIcon from '$lib/images/vsc-icons/code.svg';
 	import editIcon from '$lib/images/vsc-icons/edit.svg';
 	import githubIcon from '$lib/images/vsc-icons/github-inverted.svg';
 	import accountIcon from '$lib/images/vsc-icons/account.svg';
 	import settingsIcon from '$lib/images/vsc-icons/settings-gear.svg';
+	import { onNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-	function onSelectFile(id: string) {
-		document
-			.querySelectorAll('a.page-list')
-			.forEach((element) =>
-				element.id === id ? element.classList.add('active') : element.classList.remove('active')
-			);
+	function onSelectPage(pathname: string) {
+		document.querySelectorAll<HTMLAnchorElement>('a.page-list').forEach((element) => {
+			element.id == pathname ? element.classList.add('active') : element.classList.remove('active');
+		});
 	}
+
+	onMount(() => onSelectPage($page.url.pathname));
+
+	onNavigate(({ to }) => onSelectPage(to?.url.pathname!));
 </script>
 
 <aside class="sidebar">
 	<div class="up">
-		<a class="page-list active" href="/" on:click={() => onSelectFile('home')} id="home">
+		<a class="page-list active" href="/" on:click={() => onSelectPage('/')} id="/">
 			<img src={fileIcon} alt="" />
 		</a>
-		<a class="page-list" href="/projects" on:click={() => onSelectFile('projects')} id="projects">
+		<a class="page-list" href="/projects" on:click={() => onSelectPage('/projects')} id="/projects">
 			<img src={codeIcon} alt="" />
 		</a>
-		<a class="page-list" href="/articles" on:click={() => onSelectFile('articles')} id="articles">
+		<a class="page-list" href="/articles" on:click={() => onSelectPage('/articles')} id="/articles">
 			<img src={editIcon} alt="" />
 		</a>
 		<a href="https://github.com/Avaneesh-Chopdekar" target="_blank" rel="noopener noreferrer">
@@ -31,10 +36,10 @@
 		</a>
 	</div>
 	<div class="down">
-		<a class="page-list" href="/about" on:click={() => onSelectFile('about')} id="about">
+		<a class="page-list" href="/about" on:click={() => onSelectPage('/about')} id="/about">
 			<img src={accountIcon} alt="" />
 		</a>
-		<a class="page-list" href="/themes" on:click={() => onSelectFile('themes')} id="themes">
+		<a class="page-list" href="/themes" on:click={() => onSelectPage('/themes')} id="/themes">
 			<img src={settingsIcon} alt="" />
 		</a>
 	</div>

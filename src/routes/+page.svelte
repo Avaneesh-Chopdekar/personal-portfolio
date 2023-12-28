@@ -51,6 +51,7 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 1;
+		padding: 0 2rem;
 	}
 	.content h2 {
 		font-size: 4rem;

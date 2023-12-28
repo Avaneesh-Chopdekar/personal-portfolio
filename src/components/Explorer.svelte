@@ -11,7 +11,7 @@
 		{ fileName: 'index.jsx', route: '/', icon: reactIcon },
 		{ fileName: 'about.html', route: '/about', icon: htmlIcon },
 		{ fileName: 'projects.ts', route: '/projects', icon: tsIcon },
-		{ fileName: 'contact.json', route: '/contact', icon: jsonIcon },
+		// { fileName: 'contact.json', route: '/contact', icon: jsonIcon },
 		{ fileName: 'articles.md', route: '/articles', icon: markdownIcon },
 		{ fileName: 'themes.css', route: '/themes', icon: cssIcon }
 	];

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { navigating, page } from '$app/stores';
-	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
 	import reactIcon from '$lib/images/ext-icons/react_icon.svg';
 	import htmlIcon from '$lib/images/ext-icons/html_icon.svg';
 	import tsIcon from '$lib/images/ext-icons/ts_icon.svg';

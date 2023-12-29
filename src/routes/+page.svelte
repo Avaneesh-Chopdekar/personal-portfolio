@@ -55,6 +55,16 @@
 	}
 	.content h2 {
 		font-size: 4rem;
+		background: hsla(332, 53%, 82%, 1);
+		background: linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+		background: -moz-linear-gradient(90deg, hsla(332, 53%, 82%, 1) 0%, hsla(176, 57%, 89%, 1) 100%);
+		background: -webkit-linear-gradient(
+			90deg,
+			hsla(332, 53%, 82%, 1) 0%,
+			hsla(176, 57%, 89%, 1) 100%
+		);
+		background-clip: text;
+		color: transparent;
 	}
 	.content p {
 		padding-top: 1rem;
@@ -66,6 +76,8 @@
 		}
 		.content h2 {
 			font-size: 2.75rem;
+			background: none;
+			color: white;
 		}
 		.content h2 span::before {
 			content: '\a';

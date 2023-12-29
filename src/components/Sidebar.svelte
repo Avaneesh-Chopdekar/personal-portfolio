@@ -8,12 +8,7 @@
 	import settingsIcon from '$lib/images/vsc-icons/settings-gear.svg';
 	import { onNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
-
-	function onSelectPage(pathname: string) {
-		document.querySelectorAll<HTMLAnchorElement>('a.page-list').forEach((element) => {
-			element.id == pathname ? element.classList.add('active') : element.classList.remove('active');
-		});
-	}
+	import onSelectPage from '$lib/utils/onSelectPage';
 
 	onMount(() => onSelectPage($page.url.pathname));
 

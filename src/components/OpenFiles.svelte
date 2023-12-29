@@ -9,6 +9,7 @@
 	import type { FileListItem } from '$lib/utils/types';
 	import { onNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import onSelectPage from '$lib/utils/onSelectPage';
 
 	const explorerItems: FileListItem[] = [
 		{ fileName: 'index.jsx', route: '/', icon: reactIcon },
@@ -18,15 +19,9 @@
 		{ fileName: 'themes.css', route: '/themes', icon: cssIcon }
 	];
 
-	function onSelectFile(pathname: string) {
-		document.querySelectorAll<HTMLAnchorElement>('a.file-list').forEach((element) => {
-			element.id == pathname ? element.classList.add('active') : element.classList.remove('active');
-		});
-	}
+	onMount(() => onSelectPage($page.url.pathname));
 
-	onMount(() => onSelectFile($page.url.pathname));
-
-	onNavigate(({ to }) => onSelectFile(to?.url.pathname!));
+	onNavigate(({ to }) => onSelectPage(to?.url.pathname!));
 </script>
 
 <ul>
@@ -35,8 +30,8 @@
 			<a
 				href={item.route}
 				id={item.route}
-				class={`${index === 0 && 'active'} file-list`}
-				on:click={() => onSelectFile(item.route)}
+				class={`${index === 0 && 'active'} page-list`}
+				on:click={() => onSelectPage(item.route)}
 			>
 				<img src={item.icon} alt={item.fileName} />
 				<span>{item.fileName}</span>

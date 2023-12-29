@@ -31,7 +31,7 @@
 		height: calc(100% - 3.9rem);
 	}
 	.container {
-		width: calc(100% - 13.25rem);
+		width: calc(100% - 11.25rem);
 		height: calc(100% - 2.4rem);
 	}
 	@media screen and (max-width: 768px) {

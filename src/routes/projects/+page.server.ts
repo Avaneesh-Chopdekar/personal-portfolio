@@ -5,6 +5,6 @@ export async function load() {
 	// console.log(data.items);
 
 	return {
-		articles: data.items.filter((article) => article.fields.slug !== undefined)
+		projects: data.items.filter((project) => project.fields.githubLink !== undefined)
 	};
 }

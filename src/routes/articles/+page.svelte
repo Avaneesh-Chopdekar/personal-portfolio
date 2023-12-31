@@ -1,8 +1,18 @@
 <script>
 	// @ts-nocheck
 	import Card from '../../components/Card.svelte';
-
 	export let data;
+	let searchText = '';
+	$: filteredArticles = data.articles.filter((article) => {
+		if (searchText === '') {
+			return article;
+		} else if (
+			article.fields.title.toString().toLowerCase().includes(searchText.toLowerCase()) ||
+			article.fields.description.toString().toLowerCase().includes(searchText.toLowerCase())
+		) {
+			return article;
+		}
+	});
 </script>
 
 <svelte:head>
@@ -10,58 +20,17 @@
 </svelte:head>
 
 <main class="articles">
-	<input type="search" name="search" id="search" placeholder="Search..." />
+	<input bind:value={searchText} type="search" name="search" id="search" placeholder="Search..." />
 	<ul>
-		{#each data.articles as article (article.sys.id)}
+		{#each filteredArticles as article (article.sys.id)}
 			<Card
 				title={article.fields.title}
 				description={article.fields.description}
 				imgSrc={article.fields.coverImage.fields.file.url}
 				tags={article.fields.tags}
+				slug={article.fields.slug}
 			/>
 		{/each}
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
-		<Card
-			title="Example Article: The Greatest One"
-			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
-			imgSrc="https://picsum.photos/150/250"
-			tags={['tag1', 'tag2', 'tag3']}
-		/>
 	</ul>
 </main>
 

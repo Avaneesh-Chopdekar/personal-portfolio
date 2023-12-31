@@ -20,6 +20,48 @@
 				tags={article.fields.tags}
 			/>
 		{/each}
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
+		<Card
+			title="Example Article: The Greatest One"
+			description="Lorem ipsum dolor sit, amet consectetur adipisicing elit..."
+			imgSrc="https://picsum.photos/150/250"
+			tags={['tag1', 'tag2', 'tag3']}
+		/>
 	</ul>
 </main>
 
@@ -47,11 +89,19 @@
 		outline: 1px solid dodgerblue;
 	}
 	ul {
-		margin: 1rem 1rem 0 1rem;
+		margin: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
 	}
 	@media screen and (max-width: 768px) {
 		input {
 			width: 75%;
+			display: block;
+			margin: 1rem auto;
+		}
+		ul {
+			justify-content: center;
 		}
 	}
 </style>

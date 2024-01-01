@@ -8,16 +8,17 @@
 </script>
 
 <footer class="footer">
-	<div class="git-master">
-		<img src={gitIcon} alt="" />
-		<a
-			href="https://github.com/Avaneesh-Chopdekar/personal-portfolio"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+	<a
+		href="https://github.com/Avaneesh-Chopdekar/personal-portfolio"
+		target="_blank"
+		rel="noopener noreferrer"
+	>
+		<div class="git-master">
+			<img src={gitIcon} alt="" />
+
 			master
-		</a>
-	</div>
+		</div>
+	</a>
 	<div class="issues">
 		<div class="errors">
 			<img src={errorIcon} alt="" />
@@ -62,6 +63,10 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.25rem;
+	}
+	a:focus {
+		background-color: var(--dark);
+		outline: none;
 	}
 	.footer div:hover,
 	.footer .bell-icon:hover {

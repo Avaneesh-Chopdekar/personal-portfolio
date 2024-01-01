@@ -73,9 +73,11 @@
 	.active {
 		border-left: 2px solid var(--contrast);
 	}
+	a:focus,
 	a:hover {
 		/* border: 2px solid gray; */
 		background-color: black;
+		outline: none;
 	}
 	@media screen and (max-height: 400px) {
 		a {

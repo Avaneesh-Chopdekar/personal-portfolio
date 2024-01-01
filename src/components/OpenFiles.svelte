@@ -54,6 +54,10 @@
 		background-color: var(--dark);
 		border-top: 1px solid var(--contrast);
 	}
+	li > a:focus {
+		background-color: var(--dark);
+		outline: none;
+	}
 	img {
 		width: 1rem;
 		height: 1rem;

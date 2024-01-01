@@ -29,6 +29,9 @@
 		padding-bottom: 1rem;
 		font-size: 0.7rem;
 	}
+	summary:focus {
+		outline: 1px solid var(--contrast);
+	}
 	summary {
 		font-size: 0.8rem;
 		font-weight: bold;
@@ -45,8 +48,10 @@
 		cursor: pointer;
 		user-select: none;
 	}
+	li > a:focus,
 	li:hover {
 		background-color: var(--dark);
+		outline: none;
 	}
 	span {
 		font-size: 0.85rem;

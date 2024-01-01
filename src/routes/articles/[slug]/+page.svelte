@@ -7,6 +7,7 @@
 	const createdAt = new Date(data.article?.fields.createdAt);
 	onMount(() => {
 		let content = documentToHtmlString(data.article?.fields.content);
+		console.log(content);
 		if (browser) {
 			let contentSection = document.getElementById('content-section');
 			if (contentSection) {
@@ -25,7 +26,7 @@
 	<hr class="heading-divider" />
 	<span>{formatDate(createdAt)}</span>
 	<p class="description">{data.article?.fields.description}</p>
-	<section id="content-section"></section>
+	<section class="content" id="content-section"></section>
 	<a class="go-back" href="/articles">Read other articles</a>
 </main>
 
@@ -46,11 +47,22 @@
 	.description {
 		margin: 1rem 0;
 	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 	.go-back {
 		background-color: var(--darker);
+		border: 1px solid dodgerblue;
 		padding: 0.25rem 0.75rem;
 		border-radius: 0.25rem;
 		display: inline-block;
 		margin: 1.5rem 0;
+	}
+	@media screen and (max-width: 600px) {
+		.heading {
+			font-size: 1.75rem;
+		}
 	}
 </style>

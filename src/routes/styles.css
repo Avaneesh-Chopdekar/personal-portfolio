@@ -37,3 +37,57 @@ a {
 	color: white;
 	text-decoration: none;
 }
+
+th {
+	text-align: start;
+	background-color: var(--darker);
+}
+
+th,
+td {
+	padding: 0.75rem;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+th:last-child,
+td:last-child {
+	border-right: none;
+}
+
+.content ul > li {
+	list-style-type: disc;
+	margin-left: 2rem;
+}
+
+.content ol > li {
+	list-style-type: decimal;
+	margin-left: 2rem;
+}
+
+blockquote {
+	background: var(--accent);
+	border-left: 10px solid dodgerblue;
+	margin: 1.5em 10px;
+	padding: 1em 10px;
+	quotes: '\201C' '\201D' '\2018' '\2019';
+}
+
+blockquote:before {
+	color: dodgerblue;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+	font-style: italic;
+}
+
+.content a {
+	text-decoration: underline;
+	color: dodgerblue;
+}

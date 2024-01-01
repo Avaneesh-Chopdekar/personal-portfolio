@@ -1,4 +1,4 @@
-import client from '../../../cms';
+// import client from '../../../cms';
 import {
 	CONTENTFUL_SPACE_ID as SPACE_ID,
 	CONTENTFUL_ACCESS_TOKEN as TOKEN
@@ -12,7 +12,7 @@ export async function load({ params }) {
 		`https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${TOKEN}&content_type=articles&fields.slug=${params.slug}`
 	);
 	const data = await res.json();
-	console.log(data.items[0]);
+	// console.log(data.items[0]);
 
 	return {
 		article: data.items[0]

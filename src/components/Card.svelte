@@ -1,16 +1,17 @@
 <script lang="ts">
-	import type Contentful from 'contentful/dist/types';
-	export let title: Contentful.EntryFieldTypes.Text;
-	export let description: Contentful.EntryFieldTypes.Text;
+	export let title: string;
+	export let description: string;
 	export let imgSrc: string;
-	export let slug: Contentful.EntryFieldTypes.Text;
-	export let tags: Contentful.EntryFieldTypes.Text[];
+	export let slug: string;
+	export let tags: string[];
+
+	let trimmedDesc = description.length > 80 ? description.substring(0, 80) + '...' : description;
 </script>
 
 <a href={`/articles/${slug}`}>
 	<img src={imgSrc} alt="Preview" width="250" height="150" />
 	<p class="title">{title}</p>
-	<p class="description">{description}</p>
+	<p class="description">{trimmedDesc}</p>
 	<div class="tags">
 		{#each tags as tag (tag)}
 			<p class="tag">{tag}</p>

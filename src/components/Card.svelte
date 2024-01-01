@@ -33,7 +33,7 @@
 	}
 	a:active,
 	a:focus {
-		outline: 1px solid dodgerblue;
+		outline: 1px solid var(--contrast);
 	}
 	img {
 		border-top-left-radius: 0.25rem;

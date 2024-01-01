@@ -55,7 +55,7 @@
 	}
 	input:active,
 	input:focus {
-		outline: 1px solid dodgerblue;
+		outline: 1px solid var(--contrast);
 	}
 	ul {
 		margin: 1rem;

@@ -20,6 +20,7 @@
 	--darker: #161616;
 	--dark: #252525;
 	--accent: #3d3d3d;
+	--contrast: dodgerblue;
 }
 
 body {
@@ -67,14 +68,14 @@ td:last-child {
 
 blockquote {
 	background: var(--accent);
-	border-left: 10px solid dodgerblue;
+	border-left: 10px solid var(--contrast);
 	margin: 1.5em 10px;
 	padding: 1em 10px;
 	quotes: '\201C' '\201D' '\2018' '\2019';
 }
 
 blockquote:before {
-	color: dodgerblue;
+	color: var(--contrast);
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;
@@ -89,5 +90,5 @@ blockquote p {
 
 .content a {
 	text-decoration: underline;
-	color: dodgerblue;
+	color: var(--contrast);
 }

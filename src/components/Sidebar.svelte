@@ -71,7 +71,7 @@
 	}
 	/* a:active, */
 	.active {
-		border-left: 2px solid dodgerblue;
+		border-left: 2px solid var(--contrast);
 	}
 	a:hover {
 		/* border: 2px solid gray; */

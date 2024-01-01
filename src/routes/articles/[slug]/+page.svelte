@@ -54,7 +54,7 @@
 	}
 	.go-back {
 		background-color: var(--darker);
-		border: 1px solid dodgerblue;
+		border: 1px solid var(--contrast);
 		padding: 0.25rem 0.75rem;
 		border-radius: 0.25rem;
 		display: inline-block;

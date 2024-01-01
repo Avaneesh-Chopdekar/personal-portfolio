@@ -65,7 +65,7 @@
 	/* li > a:active, */
 	.active {
 		background-color: var(--dark);
-		border-top: 1px solid dodgerblue;
+		border-top: 1px solid var(--contrast);
 	}
 	img {
 		width: 1rem;

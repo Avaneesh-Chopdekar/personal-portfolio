@@ -31,23 +31,6 @@ body {
 	scrollbar-width: thin;
 }
 
-*::-webkit-scrollbar {
-	width: 0.5vw;
-}
-
-*::-webkit-scrollbar-track {
-	background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-	background-color: #787878;
-	border-radius: 10px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-	background-color: #c0c0c0;
-}
-
 li {
 	list-style-type: none;
 }
@@ -118,4 +101,23 @@ code {
 	font-family: monospace;
 	background: var(--accent);
 	padding: 0.25rem;
+}
+
+@media screen and (min-width: 768px) {
+	*::-webkit-scrollbar {
+		width: 0.5vw;
+	}
+
+	*::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #787878;
+		border-radius: 10px;
+	}
+
+	*::-webkit-scrollbar-thumb:hover {
+		background-color: #c0c0c0;
+	}
 }

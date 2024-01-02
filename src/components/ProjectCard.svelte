@@ -37,6 +37,7 @@
 		border-top-left-radius: 0.25rem;
 		border-top-right-radius: 0.25rem;
 		object-fit: fill;
+		width: 100%;
 	}
 	.title {
 		font-size: 1.25rem;
@@ -73,5 +74,11 @@
 		background-color: var(--darker);
 		border-radius: 0.25rem;
 		/* font-size: 0.9rem; */
+	}
+	@media screen and (max-width: 608px) {
+		.card {
+			width: 90%;
+			margin: 0 auto;
+		}
 	}
 </style>

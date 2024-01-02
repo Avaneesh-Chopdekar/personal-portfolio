@@ -32,4 +32,12 @@
 		flex-wrap: wrap;
 		gap: 1.5rem;
 	}
+	@media screen and (max-width: 768px) {
+		h2 {
+			text-align: center;
+		}
+		ul {
+			justify-content: center;
+		}
+	}
 </style>

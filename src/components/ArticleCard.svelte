@@ -67,8 +67,8 @@
 		padding: 0.25rem 0.75rem;
 		margin-right: 0.25rem;
 		margin-bottom: 0.25rem;
-		/* border: 1px solid white; */
-		background-color: var(--darker);
+		border: 1px solid white;
+		/* background-color: var(--darker); */
 		border-radius: 1rem;
 	}
 	@media screen and (max-width: 608px) {

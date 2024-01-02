@@ -23,13 +23,7 @@
 	<input bind:value={searchText} type="search" name="search" id="search" placeholder="Search..." />
 	<ul>
 		{#each filteredArticles as article (article.sys.id)}
-			<Card
-				title={article.fields.title}
-				description={article.fields.description}
-				imgSrc={article.fields.coverImage.fields.file.url}
-				tags={article.fields.tags}
-				slug={article.fields.slug}
-			/>
+			<Card {article} />
 		{/each}
 	</ul>
 </main>

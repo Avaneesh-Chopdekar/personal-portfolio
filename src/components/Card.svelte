@@ -1,15 +1,21 @@
-<script lang="ts">
-	export let title: string;
-	export let description: string;
-	export let imgSrc: string;
-	export let slug: string;
-	export let tags: string[];
+<script>
+	// @ts-nocheck
+
+	import { cacheArticleStore } from '$lib/store';
+
+	export let article;
+	const { slug, title, description, tags, coverImage } = article.fields;
 
 	let trimmedDesc = description.length > 80 ? description.substring(0, 80) + '...' : description;
+
+	function setCache() {
+		cacheArticleStore.update((cache) => cache.set(slug, article));
+		// console.log(slug, article, 'CACHE SET');
+	}
 </script>
 
-<a href={`/articles/${slug}`}>
-	<img src={imgSrc} alt="Preview" width="250" height="150" />
+<a href={`/articles/${slug}`} on:click={setCache}>
+	<img src={coverImage.fields.file.url} alt="Preview" width="250" height="150" />
 	<p class="title">{title}</p>
 	<p class="description">{trimmedDesc}</p>
 	<div class="tags">

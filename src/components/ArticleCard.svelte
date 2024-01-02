@@ -49,7 +49,7 @@
 		width: 100%;
 	}
 	.title {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-weight: bold;
 		padding: 0.5rem 1rem;
 	}

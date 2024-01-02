@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-	import Card from '../../components/Card.svelte';
+	import ArticleCard from '../../components/ArticleCard.svelte';
 	export let data;
 	let searchText = '';
 	$: filteredArticles = data.articles.filter((article) => {
@@ -23,7 +23,7 @@
 	<input bind:value={searchText} type="search" name="search" id="search" placeholder="Search..." />
 	<ul>
 		{#each filteredArticles as article (article.sys.id)}
-			<Card {article} />
+			<ArticleCard {article} />
 		{/each}
 	</ul>
 </main>

@@ -73,4 +73,10 @@
 			justify-content: center;
 		}
 	}
+	@media screen and (max-width: 608px) {
+		input {
+			width: calc(90% - 1.75rem);
+			margin: 1rem auto;
+		}
+	}
 </style>

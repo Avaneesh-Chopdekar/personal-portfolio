@@ -27,6 +27,7 @@
 		width: 250px;
 		min-height: 300px;
 		height: fit-content;
+		margin: 0;
 	}
 	a:hover {
 		cursor: pointer;
@@ -39,6 +40,7 @@
 		border-top-left-radius: 0.25rem;
 		border-top-right-radius: 0.25rem;
 		object-fit: cover;
+		width: 100%;
 	}
 	.title {
 		font-size: 1.5rem;
@@ -62,5 +64,11 @@
 		/* border: 1px solid white; */
 		background-color: var(--darker);
 		border-radius: 1rem;
+	}
+	@media screen and (max-width: 608px) {
+		a {
+			width: 90%;
+			margin: 0 auto;
+		}
 	}
 </style>

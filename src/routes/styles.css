@@ -28,6 +28,24 @@ body {
 	color: white;
 	height: 100svh;
 	width: 100%;
+	scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+	width: 0.5vw;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #787878;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #c0c0c0;
 }
 
 li {
@@ -42,6 +60,7 @@ a {
 th {
 	text-align: start;
 	background-color: var(--darker);
+	border-top: 1px solid white;
 }
 
 th,
@@ -58,12 +77,12 @@ td:last-child {
 
 .content ul > li {
 	list-style-type: disc;
-	margin-left: 2rem;
+	margin-left: 1.5rem;
 }
 
 .content ol > li {
 	list-style-type: decimal;
-	margin-left: 2rem;
+	margin-left: 1.5rem;
 }
 
 blockquote {
@@ -93,4 +112,10 @@ blockquote p {
 .content a {
 	text-decoration: underline;
 	color: var(--contrast);
+}
+
+code {
+	font-family: monospace;
+	background: var(--accent);
+	padding: 0.25rem;
 }

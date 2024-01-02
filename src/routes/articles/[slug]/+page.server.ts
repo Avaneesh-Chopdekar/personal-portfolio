@@ -8,13 +8,16 @@ export async function load({ params }) {
 	// const data = await client.getEntry('');
 	// const data = await client.getEntries({ content_type: 'articles', 'fields.slug[in]': params.slug });
 	// const item = data.items.find((item) => params.slug === item.fields.slug);
-	const res = await fetch(
-		`https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${TOKEN}&content_type=articles&fields.slug=${params.slug}`
-	);
-	const data = await res.json();
-	// console.log(data.items[0]);
+	async function fetchArticle() {
+		const res = await fetch(
+			`https://cdn.contentful.com/spaces/${SPACE_ID}/entries?access_token=${TOKEN}&content_type=articles&fields.slug=${params.slug}`
+		);
+		const data = await res.json();
+		// console.log(data.items[0]);
+		return data.items[0];
+	}
 
 	return {
-		article: data.items[0]
+		article: fetchArticle()
 	};
 }

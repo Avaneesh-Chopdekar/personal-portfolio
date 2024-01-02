@@ -7,7 +7,7 @@
 	const createdAt = new Date(data.article?.fields.createdAt);
 	onMount(() => {
 		let content = documentToHtmlString(data.article?.fields.content);
-		console.log(content);
+		// console.log(content);
 		if (browser) {
 			let contentSection = document.getElementById('content-section');
 			if (contentSection) {

@@ -15,11 +15,11 @@
 	</div>
 	<div class="btn-group">
 		{#if hostedLink}
-			<a href={hostedLink}>Visit</a>
+			<a href={hostedLink} target="_blank" rel="noopener noreferrer">Visit</a>
 		{/if}
-		<a href={githubLink}>Github</a>
+		<a href={githubLink} target="_blank" rel="noopener noreferrer">Github</a>
 		{#if appGithubLink}
-			<a href={appGithubLink}>App</a>
+			<a href={appGithubLink} target="_blank" rel="noopener noreferrer">App</a>
 		{/if}
 	</div>
 </li>

@@ -57,6 +57,23 @@
 	input:focus {
 		outline: 1px solid var(--contrast);
 	}
+	input[type='search']::-webkit-search-cancel-button {
+		-webkit-appearance: none;
+		height: 1rem;
+		width: 1rem;
+		border-radius: 50em;
+		background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+			no-repeat 50% 50%;
+		background-size: contain;
+		opacity: 0;
+		pointer-events: none;
+		filter: invert(1);
+	}
+
+	input[type='search']:focus::-webkit-search-cancel-button {
+		opacity: 0.3;
+		pointer-events: all;
+	}
 	ul {
 		margin: 1rem;
 		display: flex;

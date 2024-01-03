@@ -75,6 +75,10 @@
 		border-radius: 0.25rem;
 		/* font-size: 0.9rem; */
 	}
+	a:focus {
+		outline: 1px solid var(--contrast);
+		background-color: var(--dark);
+	}
 	@media screen and (max-width: 608px) {
 		.card {
 			width: 90%;

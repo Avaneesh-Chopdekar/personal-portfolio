@@ -6,7 +6,7 @@
 	export let article;
 	const { slug, title, description, tags, coverImage } = article.fields;
 
-	let trimmedDesc = description.length > 80 ? description.substring(0, 80) + '...' : description;
+	let trimmedDesc = description.length > 75 ? description.substring(0, 75) + '...' : description;
 
 	function setCache() {
 		cacheArticleStore.update((cache) => cache.set(slug, article));

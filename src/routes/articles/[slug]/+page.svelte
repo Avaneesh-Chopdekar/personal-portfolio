@@ -38,6 +38,9 @@
 		font-size: 1.1rem;
 		overflow: auto;
 	}
+	main > *:not(.heading) {
+		line-height: 2rem;
+	}
 	.heading {
 		font-size: 2.25rem;
 	}
